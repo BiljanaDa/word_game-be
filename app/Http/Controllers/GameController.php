@@ -17,7 +17,7 @@ class GameController extends Controller
         $score =  count(array_unique(str_split($word)));
         if($this->isPalindrome($word)) {
             $score += 3;
-        } elseif($this->isPalindrome($word)) {
+        } elseif($this->isAlmostPalindrome($word)) {
             $score += 2;
         }
 
