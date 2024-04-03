@@ -25,16 +25,16 @@ class GameController extends Controller
 
     }
 
-    private function dictionary($word) {
+    public function dictionary($word) {
         $response = Http::get("https://api.dictionaryapi.dev/api/v2/entries/en/$word");
         return $response->ok();
     }
 
-    private function isPalindrome($word) {
+    public function isPalindrome($word) {
         return $word === strrev($word);
     }
 
-    private function isAlmostPalindrome($word) {
+    public function isAlmostPalindrome($word) {
         $length = strlen($word);
 
         for($i = 0; $i < $length/2; $i++) {
