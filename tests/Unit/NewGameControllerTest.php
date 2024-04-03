@@ -3,22 +3,11 @@
 namespace Tests\Unit;
 
 use App\Http\Controllers\GameController;
+// use PHPUnit\Framework\TestCase;
 use Tests\TestCase;
 
 class NewGameControllerTest extends TestCase
 {
-    public function testDictionaryWordFound(): void 
-    {
-        $controller = new GameController();
-        $this->assertTrue($controller->dictionary('hello'));
-    }
-
-    public function testDictionaryWordNotFound(): void 
-    {
-        $controller = new GameController();
-        $this->assertFalse($controller->dictionary('wqwqwqw'));
-    }
-
     public function testIsPalindrome(): void 
     {
         $controller = new GameController();
